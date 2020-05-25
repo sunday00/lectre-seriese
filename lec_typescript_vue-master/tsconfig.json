@@ -1,0 +1,39 @@
+{
+    "compilerOptions": {
+      "target": "es5",
+      "module": "esnext",
+      "strict": true,
+      "jsx": "preserve",
+      "outDir": "./public/",
+      "importHelpers": true,
+      "moduleResolution": "node",
+      "experimentalDecorators": true,
+      "esModuleInterop": true,
+      "allowSyntheticDefaultImports": true,
+      "sourceMap": true,
+      "baseUrl": ".",
+      "noImplicitReturns": true,
+      "noImplicitAny": true,
+      "emitDecoratorMetadata": true,
+      "paths": {
+        "@/*": [
+          "resources/ts/*"
+        ],
+        "@todo/*": [
+          "resources/ts/todo/*"
+        ]
+      },
+      "lib": [
+        "esnext",
+        "dom",
+        "dom.iterable",
+        "scripthost"
+      ],
+    },
+    "include": [
+        "./resources/ts/**/*",
+    ],
+    "exclude": [
+      "node_modules"
+    ]
+  }
