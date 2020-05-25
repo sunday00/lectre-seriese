@@ -1,0 +1,18 @@
+{
+	"true": {
+		"scope": "python",
+		"prefix": "true",
+		"body": [
+			"True"
+		],
+		"description": "true is not python keyword"
+	},
+	"false": {
+		"scope": "python",
+		"prefix": "false",
+		"body": [
+			"False"
+		],
+		"description": "false is not python keyword"
+	}
+}

@@ -1,0 +1,20 @@
+<div class="card mt-3">
+    <ul class="text-xs">
+        @foreach( $project->tasks()->get() as $task)
+            @foreach ( $task->activity as $activity)
+            <li class="{{$loop->last ? "" : "mb-1"}}">
+                {{ $activity->description }}
+                {{ $activity->subject_type === "App\Project" ? $activity->subject->title : $activity->subject->body }}
+                {{ $activity->created_at->diffForHumans(null, true) }}
+            </li>
+            @endforeach    
+        @endforeach
+        @foreach ( $project->activity as $activity)
+        <li class="{{$loop->last ? "" : "mb-1"}}">
+            {{ $activity->description }}
+            {{ $activity->subject_type === "App\Project" ? $activity->subject->title : $activity->subject->body }}
+            {{ $activity->created_at->diffForHumans(null, true) }}
+        </li>
+        @endforeach
+    </ul>
+</div>

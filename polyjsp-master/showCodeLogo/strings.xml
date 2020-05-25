@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Project4_2</string>
+    <string name="quest01">Would you Ready to start?</string>
+    <string name="quest02">What is your major interest Language?</string>
+    <string name="checked01">I am Ready</string>
+    <string name="select0">laravel</string>
+    <string name="select1">nodejs</string>
+    <string name="select2">java</string>
+    <string name="select3">docker</string>
+    <string name="btn01">Show logo</string>
+</resources>

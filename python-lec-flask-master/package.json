@@ -1,0 +1,39 @@
+{
+  "name": "04flask",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack --progress",
+    "watch": "cross-env NODE_ENV=development webpack --progress --watch",
+    "prod": "cross-env NODE_ENV=production webpack --no-progress"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunday00/python-lec-flask.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunday00/python-lec-flask/issues"
+  },
+  "homepage": "https://github.com/sunday00/python-lec-flask#readme",
+  "dependencies": {
+    "tailwindcss": "^1.4.4"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "cross-env": "^7.0.2",
+    "css-loader": "^3.5.3",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.0",
+    "path": "^0.12.7",
+    "postcss-loader": "^3.0.0",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "name": "01basic-youtube",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon" : "npx nodemon --exec python3 "
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunday00/python-lecture-01basic.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunday00/python-lecture-01basic/issues"
+  },
+  "homepage": "https://github.com/sunday00/python-lecture-01basic#readme",
+  "dependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

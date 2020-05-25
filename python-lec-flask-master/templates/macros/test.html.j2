@@ -1,0 +1,23 @@
+{% macro _private_macro(arg) %}
+    <h3>{{ arg }}</h3>
+{% endmacro %}
+
+{% macro test_macro(arg) %}
+    <h3>{{ arg }}</h3>
+{% endmacro %}
+
+{% macro test_macro2(arg) %}
+    <p>{{ arg }}</p>
+{% endmacro %}
+
+{% macro test_macro3(arg) %}
+    <h3>{{ arg }}</h3>
+    <p>{{ _private_macro('can only this file') }}</p>
+{% endmacro %}
+
+{% macro call_test_macro(arg) %}
+    <h3>{{ arg }}</h3>
+    <p> {{ call_test_macro.caller }} </p>
+    <p> {{ caller( '<strong>' + arg + '</strong>' ) }} </p>
+{% endmacro %}
+

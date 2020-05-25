@@ -1,0 +1,14 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "typeRoots": ["./node_modules/@types", "./@types"],
+    "declaration": true,
+    "declarationDir": "./types"
+  },
+  "extends": "../02_baseball/configbase/tsconfig",
+  "files": ["./Example.ts"],
+  "exclude": [
+    "node_modules",
+    "*.js"
+  ]
+}

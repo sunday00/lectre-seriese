@@ -1,0 +1,41 @@
+h1 {
+    @apply text-2xl font-extrabold;
+}
+
+h2 {
+    @apply text-xl font-bold;
+}
+
+h3 {
+    @apply text-lg font-medium;
+}
+
+a {
+    @apply text-blue-600;
+}
+
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a{
+    color: inherit;
+}
+
+.button{ 
+    // @apply .bg-blue-400 .text-white .rounded-lg .shadow-lg .text-sm .py-2 .px-5;
+    @apply .bg-button .text-white .rounded-lg .shadow-lg .text-sm .py-2 .px-5;
+
+    &.border-outlined {
+        @apply .border .bg-transparent;
+    }
+}
+
+.card{
+    // @apply .bg-white .p-5 .rounded .shadow
+    @apply .bg-card .p-5 .rounded .shadow
+}
+
+img.inline{
+    display: inline-block;
+}
+
+.theme-switcher button {
+    outline: none;
+}

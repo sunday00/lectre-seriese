@@ -1,0 +1,22 @@
+{
+  "name": "complete-node-bootcamp",
+  "version": "1.0.0",
+  "description": "I just learn how to use express... ..",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "nodemon": "nodemon 4-natours/starter/server.js",
+    "pm2": "pm2 stop 4-natours/starter/server.js && NODE_ENV=development pm2 start 4-natours/starter/server.js --update-env --watch --ignore-watch 4-natours/starter/public/img && pm2 log",
+    "pm2:prod": "pm2 stop 4-natours/starter/server.js && NODE_ENV=production pm2 start 4-natours/starter/server.js --update-env --watch && pm2 log",
+    "stop": "pm2 stop 4-natours/starter/server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodejs-api": "^1.0.1",
+    "nodemon": "^2.0.2",
+    "superagent": "^5.2.1"
+  }
+}

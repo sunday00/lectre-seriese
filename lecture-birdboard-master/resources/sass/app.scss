@@ -1,0 +1,34 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+// @import '~bootstrap/scss/bootstrap';
+
+//themes
+@import 'themes/dark.scss';
+@import 'themes/light.scss';
+@import 'themes/christmas.scss';
+
+@tailwind base;
+
+
+@tailwind components;
+
+
+
+@import "components/common.scss";
+
+@tailwind utilities;
+
+// :root {
+//     --page-background-color: #F5F6F9;
+//     --card-background-color: #fff;
+//     --button-background-color: #63b3ed;
+//     --header-background-color: #fff;
+// }
+
+
+

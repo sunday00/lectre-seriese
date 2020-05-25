@@ -1,6 +1,6 @@
 git init
 
-git remote add origin https://github.com/sunday00/lectre-seriese.git
+git remote add origin https://github.com/sunday00/old-lectre-seriese.git
 
 git checkout -b "lec name"
 

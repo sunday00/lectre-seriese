@@ -1,0 +1,21 @@
+doctype
+html
+    head
+        title Natours
+        link(rel='stylesheet', href='css/style.css')
+        link(rel='shortcut icon', type='imag/png', href='img/favicon.png')
+    body
+        h1 The Park Camper
+        <h2>this is working too.</h2>
+        p Lorem ipsum dolor.
+
+        h1= tour
+        p= user
+
+        //h1 this can be seen by html developer mode.
+        //- p this is completely for developing frontend comment.
+
+        p= user.toUpperCase()
+        p how to insert variable from server side? #{ tour }.
+        - const someNo = 45;
+        p= someNo * 2

@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+
+.section{
+    padding: 10px;
+    @apply bg-gray-300;
+}
+
+h1 {
+    @apply text-2xl;
+}
+h2 {
+    @apply text-xl;
+}
+h3 {
+    @apply text-lg;
+}
+
+.sub1{
+    margin-left: 20px;
+}
+.sub2{
+    margin-left: 40px;
+}
+.sub3{
+    margin-left: 60px;
+}
+.sub4{
+    margin-left: 80px;
+}
+.sub5{
+    margin-left: 100px;
+}
+.sub6{
+    margin-left: 120px;
+}
+
+@import "tailwindcss/components";
+
+@import "tailwindcss/utilities";

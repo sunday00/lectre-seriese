@@ -1,0 +1,22 @@
+{
+  "name": "lecture_laravue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "cross-env NODE_ENV=development webpack --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunday00/lecture-laravue.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunday00/lecture-laravue/issues"
+  },
+  "homepage": "https://github.com/sunday00/lecture-laravue#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}

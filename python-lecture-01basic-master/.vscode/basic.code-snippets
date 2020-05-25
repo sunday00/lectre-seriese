@@ -1,0 +1,38 @@
+{
+	"Print to console": {
+		"prefix": "hr",
+		"body": [
+			"print(\"=====================\")",
+			"\n"
+		],
+		"description": "Log some divide line for practice"
+	},
+
+	"Insert custom import path": {
+		"prefix": "cm",
+		"body": [
+			"import sys",
+			"sys.path.append('/Users/sunday00/workspace/python/01basic-youtube/helpers')"
+		],
+		"description": "import sys and path for custom helper modules"
+	},
+
+	"Insert custom import class": {
+		"prefix": "cc",
+		"body": [
+			"import sys",
+			"sys.path.append('/Users/sunday00/workspace/python/01basic-youtube/helpers/classes')",
+			"from _$1 import $1"
+		],
+		"description": "import sys and path for custom class"
+	},
+
+	"make function" : {
+		"prefix": "func",
+		"body": [
+			"def $1 ($2):",
+			"\treturn $3"
+		],
+		"description": "import sys and path for custom helper modules"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"print": {
+		"prefix": "ppp",
+		"body": [
+			"print($1)"
+		],
+		"description": "print to fast code"
+	},
+
+	"current directory": {
+		"prefix": "ddd",
+		"body": [
+			"$1 = os.getcwd()"
+		],
+		"description": "get current directory. make sure ' import os ' first"
+	},
+
+	"3 side operating": {
+		"prefix": "if3",
+		"body": [
+			"$1 if $3 == $4 else $2"
+		],
+		"description": "for 3side operating like A == B ? C : D"
+	},
+}

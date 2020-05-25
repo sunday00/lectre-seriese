@@ -1,0 +1,19 @@
+<div id="modaldelete{{ employee.id }}" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Delete Employee</h4>
+            </div>
+            <div class="modal-body">
+                <form action="{{url_for('delete', id=employee.id)}}" method="POST">
+                    <input type="hidden" name="_method" value="delete">
+                    <input type="hidden" name="id" value="{{ employee.id }}">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>

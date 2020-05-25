@@ -1,0 +1,18 @@
+{
+	"clear screen": {
+		"scope": "python",
+		"prefix": "cls",
+		"body": [
+			"os.system('clear')"
+		],
+		"description": "clear terminal screen"
+	},
+	"horizontal line": {
+		"scope": "python",
+		"prefix": "hr",
+		"body": [
+			"print('\\n=======================\\n')",
+		],
+		"description": "print divide line"
+	}
+}

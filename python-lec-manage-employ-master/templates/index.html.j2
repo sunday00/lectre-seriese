@@ -1,0 +1,57 @@
+{% extends 'master.html.j2' %}
+
+{% block contents %}
+    <div class="row">
+        <div class="col md-12">
+            <div class="jumbotron p-3">
+                <h2>
+                    Manage
+                    <strong>Employees</strong>
+                    <button class="btn btn-success float-right" data-toggle="modal" data-target="#mymodal">Manage</button>
+                </h2>
+            </div>
+        </div>
+    </div>
+    <div>
+        {% with messages = get_flashed_messages()  %}
+            {% for message in messages %}
+                <div class="alert alert-success alert-dismissible" role="alert">
+                    {{ message }}
+                    <button type="button" class="close" data-dismiss="alert" aria-label="close">
+                        <span aria-hidden="true">x</span>
+                    </button>
+                </div>
+            {% endfor %}
+        {% endwith %}
+    </div>
+    <div>
+        <table class="table table-hover table-dark text-center">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for employee in data %}
+                    <tr>
+                        <td>{{ employee.id }}</td>
+                        <td>{{ employee.name }}</td>
+                        <td>{{ employee.email }}</td>
+                        <td>{{ employee.phone  }}</td>
+                        <td>
+                            <a href="/update/{{ employee.id }}" class="btn btn-warning btn-xs" data-toggle="modal" data-target="#modaledit{{ employee.id }}">Edit</a>
+                            <a href="/delete/{{ employee.id }}" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#modaldelete{{ employee.id }}">Del</a>
+                            {% include 'inc/editModal.html.j2' %}
+                            {% include 'inc/delModal.html.j2' %}
+                        </td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% include 'inc/addModal.html.j2' %}
+{% endblock contents %}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CalcApp01</string>
+    <string name="btn_plus">plus</string>
+    <string name="btn_minus">minus</string>
+    <string name="btn_multiple">multiple</string>
+    <string name="btn_divide">divide</string>
+    <string name="txtResult">Result : </string>
+</resources>

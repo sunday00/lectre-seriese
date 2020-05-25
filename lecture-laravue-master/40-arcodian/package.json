@@ -1,0 +1,30 @@
+{
+  "name": "40-arcodian",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "npx webpack --mode=development --watch",
+    "dev": "npx webpack --mode=development",
+    "prod": "npx webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "devDependencies": {
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "babel": "^6.23.0",
+    "babel-loader": "^8.0.6",
+    "clean-terminal-webpack-plugin": "^2.1.0",
+    "vue-loader": "^15.9.0",
+    "vue-template-compiler": "^2.6.11",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
+  }
+}

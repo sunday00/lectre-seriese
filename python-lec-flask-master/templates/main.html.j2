@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JINJA TEST</title>
+    <!-- <link rel="stylesheet" href="/static/css/main.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+    <div class="container w-full mx-auto my-4">
+        <section class="section mb-6 border-b-2 border-green-300">
+            <h1 class="title">Hello JINJA {{ data.title }}</h1>
+            {% if True %}
+                <h2> ? </h2>
+            {% endif %}
+
+            <p>
+                this is 
+                {{ title }}
+                page
+                {# if you want to trim space, use dash mark like {{- value -}} #}
+            </p>
+        </section>
+        <section class="mb-6 border-b-2 border-green-300">
+            {{"<strong>use html code</strong>" | safe}}
+            {{"<strong>use html code</strong>" | striptags}}
+            {# when sending html code to j2 dynamically and just need inner text #}
+        </section>
+        <section class="section mb-6 border-b-2 border-green-300">
+            {% raw %}
+                {{ this is code escaping }}
+            {% endraw %}
+        </section>
+        <section class="section mb-6 border-b-2 border-green-300">
+            this is server side markupped data : {{data.markupped}}
+        </section>
+        <section class="section mb-6 border-b-2 border-green-300">
+            <ul>
+            {#}
+            {% for song in data.songs %}
+                <li>{{ song[0] }} - {{ song[1] }}</li>
+            {% endfor %}
+            {#}
+            {#}
+            {% for song, singer in data.songs %}
+                <li>{{ song }} - {{ singer }}</li>
+            {% endfor %}
+            {#}
+            {% for song, singer in data.songs %}
+                <li>
+                    <div>
+                        {{ loop.index0 }}{{ loop.index }}{{ loop.revindex }}{{ loop.revindex0 }}
+                        {{ loop.first }}{{ loop.last }}
+                        {{ loop.length }}
+                    </div>
+                </li>
+            {% endfor %}
+            {#}
+            {% for lang, framework in data.skills %}
+                <li>
+                    <h3 class="subtitle text-red-400">{{ lang }}</h3>
+                    {{ loop.depth }} 
+                    <ul>
+                        {% for title, score in framework %}
+                            <li>{{ loop.depth }} {{title}} : {{score}}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            {#}
+            {% for skill in data.skills %}
+                <li>
+                    <h3 class="subtitle text-red-400">{{ skill[0] }}</h3>
+                    {{ loop.depth }} 
+                    <ul>
+                        {% for framework in skill[1] %}
+                            <li class="{{loop.cycle('bg-yellow-300', 'bg-blue-300')}}">{{framework[0]}} : {{framework[1]}} {{ loop.depth }} </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+            </ul>
+        </section>
+        <section class="section mb-6 border-b-2 border-green-300">
+            {#}
+            {% for name, score, friend in students recursive %}
+                <li>{{name}} {{score}} 
+                    <ul class="sub{{loop.depth}}">{{loop(friend)}}</ul>
+                </li>
+            {% endfor %}
+            {#}
+            {% for student in students recursive %}
+                {% set outer_loop = loop %}
+                <li>{{student.name}} {{student.score}} 
+                    <ul class="sub{{loop.depth}}">{{loop(student.friends)}} {{ outer_loop.depth }}</ul>
+                </li>
+            {% endfor %}
+        </section>
+        <section class="section mb-6 border-b-2 border-green-300">
+            <a href="/tutorial/01">go tuto1</a>
+            <a href="{{ url_for('tuto2') }}">go tuto2</a>
+        </section>
+    </div>
+</body>
+</html>
